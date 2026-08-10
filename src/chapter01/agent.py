@@ -67,7 +67,7 @@ for i in range(5): # 设置最大循环次数
     kwargs = dict(re.findall(r'(\w+)="([^"]*)"', args_str))
 
     if tool_name in available_tools:
-        observation = available_tools[tool_name](*kwargs)
+        observation = available_tools[tool_name](**kwargs)
     else:
         observation = f"错误:未定义工具 {tool_name}"
 
